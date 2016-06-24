@@ -52,11 +52,14 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
   environment:
   # To configure for broadcasting : server host for containers
   - DOCKER_HOST_IP=192.168.99.100
+  # Must match with your socket io port exposed
+  - DOCKER_HOST_PORT_SOCKETIO=1948
   ```
   
 5. Create and run the new container from the command line in the workspace folder
   
   ```yml
+  docker-compose build
   docker-compose up
   ```
   
@@ -83,8 +86,6 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
   ```yml
   environment:
   - MASTER_PASSWORD=yourmasterpassword
-  # Must match with your socket io port exposed
-  - DOCKER_HOST_PORT_SOCKETIO=1948
   ```
   
   > MASTER_PASSWORD is your password for master acces to slides
@@ -94,6 +95,7 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
 3. Build and run containers by running from your command line (inside your extracted folder)
   
   ```yml
+  docker-compose build
   docker-compose up
   ```
   
