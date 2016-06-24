@@ -43,6 +43,7 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
   ```
   
   > For Windows Users configure your shared volumes starting /c/Users/revealjs-builder (/c/Users is the only folder which can be shared) (symlink doesn't work too)
+  
   > For Linux/Unix Users path can be relative
   
   - Docker Host IP in order to connect your browser script to container backend for socketio broadcasting
