@@ -25,18 +25,18 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
 
 > ports:
 > \# For Slide share
-> - "**8080**:8080"
+> \- "**8080**:8080"
 > \# For Package download
-> - "**8081**:8081"
+> \- "**8081**:8081"
 > ...
 > ports:
-> - "1948:1948" 
+> \- "1948:1948" 
 
 - Volumes shared
 
 > volumes:
-> - **/c/Users/revealjs-builder/slides*:/project-builder/resources/slides
-> - **/c/Users/revealjs-builder/images**:/project-builder/assets/site/images
+> \- **/c/Users/revealjs-builder/slides*:/project-builder/resources/slides
+> \- **/c/Users/revealjs-builder/images**:/project-builder/assets/site/images
 
 For Windows Users configure your shared volumes starting /c/Users/revealjs-builder (/c/Users is the only folder which can be shared) (symlink doesn't work too)
 For Linux/Unix Users path can be relative
@@ -45,7 +45,7 @@ For Linux/Unix Users path can be relative
 
 > environment:
 > \# To configure for broadcasting : server host for containers
-> - DOCKER_HOST_IP=192.168.99.100
+> \- DOCKER_HOST_IP=192.168.99.100
 
 5. Create and run the new container from the command line in the workspace folder
 
@@ -62,17 +62,17 @@ For Linux/Unix Users path can be relative
 - Ports
 
 > ports:
-> - "**80**:80"   
+> \- "**80**:80"   
 > ...
 > ports:
-> - "**1948**:1948" 
+> \- "**1948**:1948" 
 
 - Environment variables
 
 > environment:
-> - MASTER_PASSWORD=yourmasterpassword
+> \- MASTER_PASSWORD=yourmasterpassword
 > \# Must match with your socket io port exposed
-> - DOCKER_HOST_PORT_SOCKETIO=1948
+> \- DOCKER_HOST_PORT_SOCKETIO=1948
 
 MASTER_PASSWORD is your password for master acces to slides
 
