@@ -23,33 +23,41 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
 
 - ports
 
-> ports:
-> \# For Slide share
-> \- "**8080**:8080"
-> \# For Package download
-> \- "**8081**:8081"
-> ...
-> ports:
-> \- "1948:1948" 
+```yml
+ports:
+# For Slide share
+- "**8080**:8080"
+# For Package download
+- "**8081**:8081"
+# ...
+ports:
+- "1948:1948" 
+```
 
 - Volumes shared
 
-> volumes:
-> \- **/c/Users/revealjs-builder/slides*:/project-builder/resources/slides
-> \- **/c/Users/revealjs-builder/images**:/project-builder/assets/site/images
+```yml
+volumes:
+- **/c/Users/revealjs-builder/slides*:/project-builder/resources/slides
+- **/c/Users/revealjs-builder/images**:/project-builder/assets/site/images
+```
 
-For Windows Users configure your shared volumes starting /c/Users/revealjs-builder (/c/Users is the only folder which can be shared) (symlink doesn't work too)
-For Linux/Unix Users path can be relative
+> For Windows Users configure your shared volumes starting /c/Users/revealjs-builder (/c/Users is the only folder which can be shared) (symlink doesn't work too)
+> For Linux/Unix Users path can be relative
 
 - Docker Host IP in order to connect your browser script to container backend for socketio broadcasting
 
-> environment:
-> \# To configure for broadcasting : server host for containers
-> \- DOCKER_HOST_IP=192.168.99.100
+```yml
+environment:
+# To configure for broadcasting : server host for containers
+- DOCKER_HOST_IP=192.168.99.100
+```
 
 5. Create and run the new container from the command line in the workspace folder
 
-> docker-compose up
+```yml
+docker-compose up
+```
 
 6. Open your browser to  http://<your_docker_host>:<your_port_mapping_for_8080_in_configuration_file>/. Adapt your slides, the browser will be automatically updated.
 
@@ -61,30 +69,36 @@ For Linux/Unix Users path can be relative
 
 - Ports
 
-> ports:
-> \- "**80**:80"   
-> ...
-> ports:
-> \- "**1948**:1948" 
+```yml
+ports:
+- "**80**:80"   
+# ...
+ports:
+- "**1948**:1948" 
+```
 
 - Environment variables
 
-> environment:
-> \- MASTER_PASSWORD=yourmasterpassword
-> \# Must match with your socket io port exposed
-> \- DOCKER_HOST_PORT_SOCKETIO=1948
+```yml
+environment:
+- MASTER_PASSWORD=yourmasterpassword
+# Must match with your socket io port exposed
+- DOCKER_HOST_PORT_SOCKETIO=1948
+```
 
-MASTER_PASSWORD is your password for master acces to slides
+> MASTER_PASSWORD is your password for master acces to slides
 
 - You can configure docker to use an existing socketio container by commenting socketio service and replacing existing link with external_links
 
 3. Build and run containers by running from your command line (inside your extracted folder)
 
-> docker-compose up
+```yml
+docker-compose up
+```
 
 4. Access to your master presentation with http://<your_docker_host>:<your_port_mapping_for_80_in_configuration_file>/master.html
 
-User is 'master', Password had been set in yout docker-compose.yml
+> User is 'master', Password had been set in yout docker-compose.yml
 
 4b. Client access http://<your_docker_host>:<your_port_mapping_for_80_in_configuration_file>/client.html is public
 
