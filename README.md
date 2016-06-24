@@ -21,7 +21,7 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
 
 4. Configure docker-compose.yml to set
 
-- ports
+  - ports
 
 ```yml
 ports:
@@ -34,7 +34,7 @@ ports:
 - "1948:1948" 
 ```
 
-- Volumes shared
+  - Volumes shared
 
 ```yml
 volumes:
@@ -45,7 +45,7 @@ volumes:
 > For Windows Users configure your shared volumes starting /c/Users/revealjs-builder (/c/Users is the only folder which can be shared) (symlink doesn't work too)
 > For Linux/Unix Users path can be relative
 
-- Docker Host IP in order to connect your browser script to container backend for socketio broadcasting
+  - Docker Host IP in order to connect your browser script to container backend for socketio broadcasting
 
 ```yml
 environment:
@@ -67,7 +67,7 @@ docker-compose up
 
 2. Extract it and set your settings by editing docker-compose.yml :
 
-- Ports
+  - Ports
 
 ```yml
 ports:
@@ -77,7 +77,7 @@ ports:
 - "**1948**:1948" 
 ```
 
-- Environment variables
+  - Environment variables
 
 ```yml
 environment:
@@ -88,7 +88,7 @@ environment:
 
 > MASTER_PASSWORD is your password for master acces to slides
 
-- You can configure docker to use an existing socketio container by commenting socketio service and replacing existing link with external_links
+  - You can configure docker to use an existing socketio container by commenting socketio service and replacing existing link with external_links
 
 3. Build and run containers by running from your command line (inside your extracted folder)
 
