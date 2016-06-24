@@ -24,9 +24,9 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
 - ports
 
 > ports:
-> # For Slide share
+> \# For Slide share
 > - "**8080**:8080"
-> # For Package download
+> \# For Package download
 > - "**8081**:8081"
 > ...
 > ports:
@@ -44,7 +44,7 @@ For Linux/Unix Users path can be relative
 - Docker Host IP in order to connect your browser script to container backend for socketio broadcasting
 
 > environment:
-> # To configure for broadcasting : server host for containers
+> \# To configure for broadcasting : server host for containers
 > - DOCKER_HOST_IP=192.168.99.100
 
 5. Create and run the new container from the command line in the workspace folder
@@ -71,7 +71,7 @@ For Linux/Unix Users path can be relative
 
 > environment:
 > - MASTER_PASSWORD=yourmasterpassword
-> # Must match with your socket io port exposed
+> \# Must match with your socket io port exposed
 > - DOCKER_HOST_PORT_SOCKETIO=1948
 
 MASTER_PASSWORD is your password for master acces to slides
