@@ -59,7 +59,6 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
 5. Create and run the new container from the command line in the workspace folder
   
   ```yml
-  docker-compose build
   docker-compose up
   ```
   
