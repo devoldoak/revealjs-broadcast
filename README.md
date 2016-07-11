@@ -40,7 +40,7 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
   - **/c/Users/revealjs-builder/images**:/project-builder/assets/site/images
   ```
   
-  > For Windows Users configure your shared volumes starting /c/Users/revealjs-builder (/c/Users is the only folder which can be shared) (symlink doesn't work too)
+  > For Windows Users configure your shared volumes starting /c/Users/revealjs-builder (/c/Users is the only folder which can be shared) (symlink doesn't work too). So you have to move your slides and images folder to a subdirectory of C:\Users and configure it inside yml file.
   
   > For Linux/Unix Users path can be relative
   
@@ -60,11 +60,11 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
   docker-compose up
   ```
   
-6. Open your browser to  http://<your_docker_host>:<your_port_mapping_for_8080_in_configuration_file>/. Adapt your slides, the browser will be automatically updated.
+6. Open your browser to  http://$(your_docker_host):$(your_port_mapping_for_8080_in_configuration_file)/. Adapt your slides, the browser will be automatically updated.
 
 ## Share your slideshow
 
-1. Get built package from http://<your_docker_host>:<your_port_mapping_for_8081_in_configuration_file>/package.zip
+1. Get built package from http://$(your_docker_host):$(your_port_mapping_for_8081_in_configuration_file)/package.zip
 
 2. Extract it and set your settings by editing docker-compose.yml :
   
@@ -96,11 +96,11 @@ Get and install docket-toolbox : https://www.docker.com/products/docker-toolbox
   docker-compose up
   ```
   
-4. Access to your master presentation with http://<your_docker_host>:<your_port_mapping_for_80_in_configuration_file>/master.html
+4. Access to your master presentation with http://$(your_docker_host):$(your_port_mapping_for_80_in_configuration_file)/master.html
   
   > User is 'master', Password had been set in yout docker-compose.yml
   
-  Client access http://<your_docker_host>:<your_port_mapping_for_80_in_configuration_file>/client.html is public
+  Client access http://$(your_docker_host):$(your_port_mapping_for_80_in_configuration_file)/client.html is public
   
 # How to sort slides
 
