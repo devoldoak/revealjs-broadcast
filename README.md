@@ -3,8 +3,6 @@ Docker image for building container of revealJS slides.
 It includes :
 - Socket.IO : Broadcast your slideshow
 
-Docker HUB link : https://hub.docker.com/r/dkrpigeyre/revealjs-broadcast
-
 # How to use it?
 
 ## Requirements
