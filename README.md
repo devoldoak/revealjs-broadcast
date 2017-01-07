@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/dkrpigeyre/revealjs-presenter.svg)](https://microbadger.com/images/dkrpigeyre/revealjs-presenter)
+
 Docker image for building container of revealJS slides.
 
 It includes :
